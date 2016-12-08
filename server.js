@@ -7,12 +7,9 @@ app.get('/', function(req, res) {
   res.status(200).send('Server Running');
 });
 
-app.get('/advertisers/?format=json', function(req, res) {
-  res.status(200).json({name: 'advertisers'});
-});
-
-app.get('/advertisers/?format=xml', function(req, res) {
-  res.status(200).xml('<test></test>');
+app.get('/:file', function(req, res) {
+  var filename = req.params.file
+  res.status(200).json(require('./mock/'+filename));
 });
 
 app.listen(3000, function () {
