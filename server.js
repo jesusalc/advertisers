@@ -4,15 +4,11 @@ var app = express();
 
 app.get('/', function(req, res) {
   console.log("Server Running");
-  res.status(200).
-});
-
-app.get('/api/init', function(req, res) {
-  res.status(200).json([[0,0,0],[0,0,0],[0,0,0]]);
+  res.status(200).send('Server Running');
 });
 
 app.get('/advertisers/?format=json', function(req, res) {
-  res.status(200).json('"name": "advertisers"');
+  res.status(200).json({name: 'advertisers'});
 });
 
 app.get('/advertisers/?format=xml', function(req, res) {
