@@ -9,7 +9,7 @@ app.get('/', function(req, res) {
 
 app.get('/:file', function(req, res) {
   var filename = req.params.file
-  res.status(200).json(require('./mock/'+filename));
+  res.json(require('./mock/'+filename));
 });
 
 app.listen(3000, function () {
