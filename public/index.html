@@ -1,0 +1,41 @@
+<html>
+<head>
+
+    <script src="app.js"></script>
+    <style>
+        pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+        .string { color: green; }
+        .number { color: darkorange; }
+        .boolean { color: blue; }
+        .null { color: magenta; }
+        .key { color: red; }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="redline"></div>
+    <div id="headerTitle"></div>
+    <div id="background"></div>
+</div>
+<div id="workarea">
+    <div id="title">Advertiser List</div>
+    <div id="dropdown">
+        <label for="formatselector">Specify format for the GET request</label>
+        <select name="formatselector" id="formatselector" onchange="changeFormat(event);">
+            <option value="json">JSON</option>
+            <option value="xml">XML</option>
+        </select>
+    </div>
+    <div id="requestget">
+        <span id="requesttype">GET</span>
+        <span id="requesturl">/advertisers/?format=api</span>
+    </div>
+    <div id="response">
+        <div id="responseheader"></div>
+        <div id="responsebody"><pre id="responsebodypre"></pre></div>
+    </div>
+
+</div>
+
+</body>
+</html>
