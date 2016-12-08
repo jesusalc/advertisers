@@ -14,12 +14,12 @@ describe('GET /advertisers/?format=json', function() {
 
 describe('GET /advertisers/?format=xml', function() {
   it('should serve xml file', function(done) {
-   supertest_request(app)
+    supertest_request(app)
       .get('/advertisers/?format=xml')
       .set('Accept', 'application/xml')
       .expect('Content-Type', /xml/)
-      .expect(200).expect(fs.open('./mock/advertisers.xml'),done);
-  });  
+      .expect(200).expect(fs.readFileSync('./mock/advertisers.xml', 'utf8'), done);
+  });
 });
 
 
