@@ -2,7 +2,11 @@ var express = require('express');
 
 var app = express();
 
-app.get('/api/init', function(req, res) {
+app.get('/advertisers/?format=json', function(req, res) {
+  res.status(200).json([[0,0,0],[0,0,0],[0,0,0]]);
+});
+
+app.get('/advertisers/?format=xml', function(req, res) {
   res.status(200).json([[0,0,0],[0,0,0],[0,0,0]]);
 });
 
