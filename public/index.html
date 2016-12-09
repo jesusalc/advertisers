@@ -42,24 +42,30 @@
     <div id="background"></div>
 </div>
 <div id="workarea">
-    <div id="title">Advertiser List</div>
-    <div id="dropdown">
-        <label for="formatselector">Specify format for the GET request</label>
 
-        <div id="dropdown_selector" class="dropdown clearfix open" onclick="dropdown(event, 'dropdown_selector');">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="true"> Dropdown <span class="caret"></span></button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a href="#" onchange="changeFormat(event, 'json');">JSON</a></li>
-                <li><a href="#" onchange="changeFormat(event, 'xml');">XML</a></li>
-            </ul>
+    <div class="clearfix">
+        <div class="tooltip top float-xs-right" >
+            <div class="tooltip-arrow"></div>
+            <div class="tooltip-inner">Specify format for the GET request</div>
         </div>
+    </div>
 
-        <select name="formatselector" id="formatselector" onchange="changeFormat(event);">
+    <div class="clearfix">
+        <div id="title" class="float-xs-left">Advertiser List</div>
+
+        <select id="formatselector" name="formatselector" class="btn btn-secondary float-xs-right"  onchange="changeFormat(event);">
             <option value="json" selected="json">JSON</option>
             <option value="xml">XML</option>
         </select>
+
+
+
     </div>
+
+
+
+    <label for="formatselector"></label>
+
     <div id="requestget">
         <span id="requesttype">GET</span>
         <span id="requesturl">/advertisers/?format=api</span>
