@@ -5,12 +5,31 @@
 
     <link rel="stylesheet" href="styles.css">
     <style>
-        pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
-        .string { color: green; }
-        .number { color: darkorange; }
-        .boolean { color: blue; }
-        .null { color: magenta; }
-        .key { color: red; }
+        pre {
+            outline: 1px solid #ccc;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .string {
+            color: green;
+        }
+
+        .number {
+            color: darkorange;
+        }
+
+        .boolean {
+            color: blue;
+        }
+
+        .null {
+            color: magenta;
+        }
+
+        .key {
+            color: red;
+        }
     </style>
 
 </head>
@@ -18,15 +37,26 @@
 
 <div id="container">
     <div id="red_line"></div>
-    <div id="header_title">Schibsted REST framework <span class="version">v </span><span class="versionnumber">3.1.1</span></div>
+    <div id="header_title">Schibsted REST framework <span class="version">v </span><span
+            class="versionnumber">3.1.1</span></div>
     <div id="background"></div>
 </div>
 <div id="workarea">
     <div id="title">Advertiser List</div>
     <div id="dropdown">
         <label for="formatselector">Specify format for the GET request</label>
+
+        <div id="dropdown_selector" class="dropdown clearfix open" onclick="dropdown(event, 'dropdown_selector');">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="true"> Dropdown <span class="caret"></span></button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#" onchange="changeFormat(event, 'json');">JSON</a></li>
+                <li><a href="#" onchange="changeFormat(event, 'xml');">XML</a></li>
+            </ul>
+        </div>
+
         <select name="formatselector" id="formatselector" onchange="changeFormat(event);">
-            <option value="json">JSON</option>
+            <option value="json" selected="json">JSON</option>
             <option value="xml">XML</option>
         </select>
     </div>
@@ -36,7 +66,9 @@
     </div>
     <div id="response">
         <div id="responseheader"></div>
-        <div id="responsebody"><pre id="responsebodypre"></pre></div>
+        <div id="responsebody">
+            <pre id="responsebodypre"></pre>
+        </div>
     </div>
 
 </div>
