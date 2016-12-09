@@ -1,0 +1,145 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Reset end */
+
+html {
+    display: block;
+    background-image: url(./background_squares.jpg);
+}
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#red_line {
+    top: 0;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, Verdana, sans-serif;
+    height: 10px;
+    z-index: 9999;
+    width: 100%;
+    display: block;
+    position: relative;
+    /* overflow: auto; */
+
+
+    background: #a30000;
+    background: -moz-linear-gradient(top, color-stop(0%,#a30000), color-stop(100%,#a30000));
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a30000), color-stop(100%,#a30000));
+    background: -webkit-linear-gradient(top, #a30000 0%,#a30000 100%);
+    background: -o-linear-gradient(top, color-stop(0%,#a30000), color-stop(100%,#a30000));
+    background: -ms-linear-gradient(top, color-stop(0%,#a30000), color-stop(100%,#a30000));
+    background: linear-gradient(to bottom, #a30000 0%,#a30000 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a30000', endColorstr='#a30000',GradientType=0 );
+    -webkit-font-smoothing: subpixel-antialiased !important;
+}
+
+@media only screen and (max-width: 840px) {
+    #red_line {
+        /*display: none !important;*/
+    }
+}
+
+
+#header_title {
+    top: 0;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, Verdana, sans-serif;
+    height: 100px;
+    z-index: 9999;
+    width: 100%;
+    display: block;
+    position: relative;
+    /* overflow: auto; */
+
+    vertical-align: middle;
+    padding-top: 35px;
+    font-size: 31px;
+    padding-left: 5%;
+    color: #777777;
+
+    background: #2c2c2c;
+    background: -moz-linear-gradient(top, color-stop(0%,#2c2c2c), color-stop(100%,#2c2c2c));
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2c2c2c), color-stop(100%,#2c2c2c));
+    background: -webkit-linear-gradient(top, #2c2c2c 0%,#2c2c2c 100%);
+    background: -o-linear-gradient(top, color-stop(0%,#2c2c2c), color-stop(100%,#2c2c2c));
+    background: -ms-linear-gradient(top, color-stop(0%,#2c2c2c), color-stop(100%,#2c2c2c));
+    background: linear-gradient(to bottom, #2c2c2c 0%,#2c2c2c 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c2c2c', endColorstr='#2c2c2c',GradientType=0 );
+    -webkit-font-smoothing: subpixel-antialiased !important;
+}
+
+#header_title  span.version {
+    color: #585858;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+#header_title  span.versionnumber {
+    font-size: 20px;
+}
+@media only screen and (max-width: 840px) {
+    #header_title {
+        /*display: none !important;*/
+    }
+}
+
+
+
+title
+
+
+
