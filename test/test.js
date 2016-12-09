@@ -1,5 +1,5 @@
 var supertest_request = require('supertest'),
-    app = require("./server.js").app,
+    app = require("../server.js").app,
     fs = require("fs");
 
 describe('GET /advertisers/?format=json', function() {
@@ -8,7 +8,7 @@ describe('GET /advertisers/?format=json', function() {
       .get('/advertisers/?format=json')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
-      .expect(200).expect(require('./mock/advertisers.json'),done);
+      .expect(200).expect(require('../mock/advertisers.json'),done);
   });  
 });
 
