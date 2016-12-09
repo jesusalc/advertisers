@@ -143,11 +143,6 @@ a {
 
 
 
-.tooltip {
-  top: 12132px;
-  left: 121231px;
-  display: block;
-}
 
 .tooltip {
   position: absolute;
@@ -204,6 +199,12 @@ a {
   height: 0;
   border-color: transparent;
   border-style: solid;
+}
+
+.tooltip {
+  top: 50px;
+  left: 50px;
+  display: block;
 }
 
 #red_line {
